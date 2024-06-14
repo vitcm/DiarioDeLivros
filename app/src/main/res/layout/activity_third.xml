@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#75C5D1"
+    tools:context=".ThirdActivity">
+
+    <TextView
+        android:id="@+id/tituloPag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar livro"
+        android:layout_marginStart="20dp"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Campo Título -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/tituloPag"
+        android:id="@+id/campoTitulo">
+
+        <TextView
+            android:id="@+id/tituloLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Título:"
+            android:layout_marginStart="20dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/tituloInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloLabel"
+            android:background="@null"
+            android:inputType="text"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Digite o título" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/campoAutor"
+        android:layout_below="@id/campoTitulo">
+    <!-- Campo Autor(a) -->
+        <TextView
+            android:id="@+id/autorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Autor(a):"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/autorInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/autorLabel"
+            android:background="@null"
+            android:inputType="text"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="Digite o autor(a)"
+            android:layout_marginBottom="20dp" />
+        </LinearLayout>
+
+    <!-- Campo Data Fim da Leitura -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/campoFim"
+        android:layout_below="@id/campoAutor" >
+        <TextView
+            android:id="@+id/dataFimLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/autorInput"
+            android:layout_marginStart="20dp"
+            android:text="Data fim da leitura:"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/dataFimInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/dataFimLabel"
+            android:background="@null"
+            android:focusable="false"
+            android:clickable="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="Digite a data fim da leitura"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/campoNota"
+        android:layout_below="@id/campoFim">
+    <!-- Campo Nota -->
+    <TextView
+        android:id="@+id/notaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dataFimInput"
+        android:layout_marginStart="20dp"
+        android:text="Nota:"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/notaInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/notaLabel"
+        android:background="@null"
+        android:inputType="numberDecimal"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:hint="Digite a nota"
+        android:layout_marginBottom="20dp" />
+    </LinearLayout>
+    <!-- Botão Cadastrar Livro -->
+    <RelativeLayout
+        android:id="@+id/cadastrarLivroButtonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+
+        <!-- ImageButton -->
+        <ImageButton
+            android:id="@+id/cadastrarLivroButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Caadastrar livro"
+            android:scaleType="fitCenter"
+            android:onClick="onEntrarImageButtonClick" />
+
+        <!-- Título sobre o ImageButton -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entrar"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

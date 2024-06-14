@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#75C5D1"
+    tools:context=".ThirdActivity">
+
+    <TextView
+        android:id="@+id/tituloPagEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Campo Título -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/tituloPagEdit"
+        android:id="@+id/campoTituloEdit">
+
+        <TextView
+            android:id="@+id/tituloLabelEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Título:"
+            android:layout_marginStart="20dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/tituloInputEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloLabelEdit"
+            android:background="@null"
+            android:inputType="text"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/campoAutorEdit"
+        android:layout_below="@id/campoTituloEdit">
+        <!-- Campo Autor(a) -->
+        <TextView
+            android:id="@+id/autorLabelEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Autor(a):"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/autorInputEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/autorLabelEdit"
+            android:background="@null"
+            android:inputType="text"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+
+    <!-- Campo Data Fim da Leitura -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/campoFimEdit"
+        android:layout_below="@id/campoAutorEdit" >
+        <TextView
+            android:id="@+id/dataFimLabelEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/autorInputEdit"
+            android:layout_marginStart="20dp"
+            android:text="Data fim da leitura:"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/dataFimInputEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/dataFimLabelEdit"
+            android:background="@null"
+            android:focusable="false"
+            android:clickable="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/campoNotaEdit"
+        android:layout_below="@id/campoFimEdit">
+        <!-- Campo Nota -->
+        <TextView
+            android:id="@+id/notaLabelEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dataFimInputEdit"
+            android:layout_marginStart="20dp"
+            android:text="Nota:"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/notaInputEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/notaLabelEdit"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:layout_marginBottom="20dp" />
+    </LinearLayout>
+    <!-- Botão Cadastrar Livro -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonsSpace"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+    <Button
+        android:id="@+id/EditarLivroButton"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_background"
+        android:text="Editar"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:gravity="center" />
+        <Button
+            android:id="@+id/ApagarLivroButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_background"
+            android:text="Apagar"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

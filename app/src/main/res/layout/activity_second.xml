@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#75C5D1"
+    tools:context=".SecondActivity">
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/cadastrarButtonLayout"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Botão Cadastrar -->
+    <RelativeLayout
+        android:id="@+id/cadastrarButtonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+
+        <!-- ImageButton -->
+        <ImageButton
+            android:id="@+id/cadastrarButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Cadastrar"
+            android:scaleType="fitCenter"
+            android:onClick="onEntrarImageButtonClick" />
+
+        <!-- Título sobre o ImageButton -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entrar"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
