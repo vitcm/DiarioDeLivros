@@ -29,7 +29,14 @@ public class SecondActivity extends AppCompatActivity {
         dbManager = new BooksDbManager(this);
         List<Livro> livros = dbManager.getBooks();
 
-        bookAdapter = new BookAdapter(livros);
+        bookAdapter = new BookAdapter(livros, new BookAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Livro livro) {
+                Intent intent = new Intent(SecondActivity.this, FourthActivity.class);
+                intent.putExtra("livroId", livro.getId());
+                startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(bookAdapter);
 
         ImageButton cadastrarButton = findViewById(R.id.cadastrarButton);
@@ -46,7 +53,14 @@ public class SecondActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         List<Livro> livros = dbManager.getBooks();
-        bookAdapter = new BookAdapter(livros);
+        bookAdapter = new BookAdapter(livros, new BookAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Livro livro) {
+                Intent intent = new Intent(SecondActivity.this, FourthActivity.class);
+                intent.putExtra("livroId", livro.getId());
+                startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(bookAdapter);
     }
 }

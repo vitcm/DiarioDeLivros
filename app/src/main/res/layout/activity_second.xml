@@ -13,7 +13,8 @@
         android:layout_height="0dp"
         android:layout_above="@id/cadastrarButtonLayout"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="50dp"/>
 
     <!-- Botão Cadastrar -->
     <RelativeLayout
@@ -32,13 +33,13 @@
             android:background="@drawable/button_background"
             android:contentDescription="Cadastrar"
             android:scaleType="fitCenter"
-            android:onClick="onEntrarImageButtonClick" />
+            android:onClick="onCadastrarImageButtonClick" />
 
         <!-- Título sobre o ImageButton -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Entrar"
+            android:text="Cadastrar"
             android:textColor="#ffffff"
             android:textSize="18sp"
             android:layout_centerInParent="true" />

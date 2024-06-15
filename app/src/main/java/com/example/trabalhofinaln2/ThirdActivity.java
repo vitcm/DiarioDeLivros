@@ -84,7 +84,6 @@ public class ThirdActivity extends AppCompatActivity {
 
     private void cadastrarLivro(String titulo, String autor, String dataFimLeitura, float nota) {
 
-
         Livro livro = new Livro(0, titulo, autor, dataFimLeitura, nota);
 
         dbManager.addBook(livro);
