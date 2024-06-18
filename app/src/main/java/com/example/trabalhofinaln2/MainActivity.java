@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         ImageButton entrarImageButton = findViewById(R.id.entrarImageButton);
         entrarImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
